@@ -21,7 +21,7 @@ public_users.post("/register", (req, res) => {
   }
   users.push({ username: username, password: password });
   //Write your code here
-  return res.status(300).json({ message: "Yet to be implemented" });
+  return res.status(200).json({ message: "User Registered!" });
 });
 
 // Get the book list available in the shop
@@ -79,7 +79,7 @@ public_users.get("/review/:isbn", function (req, res) {
      .status(401)
      .json({ message: "Invalid ISBN" });
   }
-  return res.status(200).json( books[isbn].review);
+  return res.status(200).json( books[isbn].reviews);
 });
 
 module.exports.general = public_users;
